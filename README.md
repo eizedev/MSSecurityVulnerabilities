@@ -2,7 +2,7 @@
 
 A PowerShell module for retrieving information regarding Microsoft security vulnerabilities using the Security Updates API (version 1) from https://portal.msrc.microsoft.com/en-us/developer
 
-> At the moment the API Key is not needed anymore for these implementation
+> As of `2021-02` the API Key is not needed anymore for the MSRC CVRF API
 >
 > If you want to test the `2.0` REST API, please take a look at https://api.msrc.microsoft.com/cvrf/v2.0/swagger/index
 >
@@ -19,15 +19,6 @@ Find-MSSecurityVulnerabilities -Month Dec -Year 2023
 ```
 
 Add `-Verbose` to get verbose output (f.e. url)
-
-### with API Key
-
-You'll need to sign in and retrieve your API key in order to make calls using this module.
-
-```powershell
-$Key = 'fe6ff006ada446a2bc9250b242d0cf78'
-Find-MSSecurityVulnerabilities -Month Dec -Year 2023 -ApiKey $Key
-```
 
 ### only return Product Tree
 
