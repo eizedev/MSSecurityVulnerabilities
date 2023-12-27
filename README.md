@@ -6,9 +6,11 @@ A PowerShell module for retrieving information regarding Microsoft security vuln
 >
 > You will find the API documentation at https://api.msrc.microsoft.com/cvrf/v2.0/swagger/index
 >
-> There is also an official powershell module for the `2.0` REST API with additional functionallity available: https://github.com/microsoft/MSRC-Microsoft-Security-Updates-API
+> There is also an official powershell module for the `2.0` REST API with additional functionallity available: [MSRC-Microsoft-Security-Updates-API](https://github.com/microsoft/MSRC-Microsoft-Security-Updates-API)
 >
-> This powershell module/code here in this repsitory only parses the resultend `vulnerabilities` from the api and output it in a specific way
+> This powershell module/code here in this repository only parses the resultend `vulnerabilities` from the api and output it in a specific way
+>
+> A comparable command that outputs the raw information with the official module would be `$cvrfDoc = Get-MsrcCvrfDocument -ID 2023-Dec -Verbose`.
 
 ## Examples
 
