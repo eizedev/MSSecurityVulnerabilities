@@ -25,52 +25,35 @@ Find-MSSecurityVulnerabilities -Month Dec -Year 2023
 
 Add `-Verbose` to get verbose output (f.e. url)
 
-Example result:
+Example (truncated) result of one vulnerability:
 
 ```powershell
-Title                  : Chromium: CVE-2023-6508 Use after free in Media Stream
-Notes                  : {@{Title=Description; Type=2; Ordinal=0; Value=<p>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this
-                         vulnerability. Please see <a href="https://chromereleases.googleblog.com/2023">Google Chrome Releases</a> for more information.</p>
-                         }, @{Title=FAQ; Type=4; Ordinal=10; Value=<p><strong>Why is this Chrome CVE included in the Security Update Guide?</strong></p>
-                         <p>The vulnerability assigned to this CVE is in Chromium Open Source Software (OSS) which is consumed by Microsoft Edge (Chromium-based). It is being documented in
-                         the Security Update Guide to announce that the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable.</p>
-                         <p><strong>How can I see the version of the browser?</strong></p>
-                         <ol>
-                         <li>In your Microsoft Edge browser, click on the 3 dots (...) on the very right-hand side of the window</li>
-                         <li>Click on <strong>Help and Feedback</strong></li>
-                         <li>Click on <strong>About Microsoft Edge</strong></li>
-                         </ol>
-                         }, @{Title=FAQ; Type=4; Ordinal=10; Value=<p><strong>What is the version information for this release?</strong></p>
-                         <table>
-                         <thead>
-                         <tr>
-                         <th>Microsoft Edge Version</th>
-                         <th>Date Released</th>
-                         <th>Based on Chromium Version</th>
-                         </tr>
-                         </thead>
-                         <tbody>
-                         <tr>
-                         <td>120.0.2210.61</td>
-                         <td>12/7/2023</td>
-                         <td>120.0.6099.62/.63</td>
-                         </tr>
-                         </tbody>
-                         </table>
-                         }, @{Title=Microsoft Edge (Chromium-based); Type=7; Ordinal=20; Value=Microsoft Edge (Chromium-based)}…}
-CVE                    : CVE-2023-6508
-CVSSScoreSets          :
-Remediations           : @{ProductId=11655; Product=Microsoft Edge (Chromium-based); Description=Release Notes; Type=2; Url=; DateSpecified=False; RestartRequired=No; SubType=Security
-                         Update; FixedBuild=120.0.2210.61}
-Acknowledgments        :
+Title                  : Azure DevOps Server Spoofing Vulnerability
+Notes                  : {@{Title=Description; Type=2; Ordinal=0; Value=}, @{Title=FAQ; Type=4; Ordinal=10; Value=<p><strong>According to the CVSS metric,privileges required is low(PR:L).
+                         What does that mean for this vulnerability?</strong></p>
+                         <p>This means that an attacker needs to have a user account in the organization with the ability to run builds.</p>
+                         }, @{Title=FAQ; Type=4; Ordinal=10; Value=<p><strong>According to the CVSS metric, successful exploitation of this vulnerability could impact the integrity(I:H).
+                         What does that mean for this vulnerability?</strong></p>
+                         <p>Successful exploitation compromises the integrity of the build verification process, allowing an attacker to spoof and bypass verification.</p>
+                         }, @{Title=Azure DevOps; Type=7; Ordinal=20; Value=Azure DevOps}…}
+CVE                    : CVE-2023-21751
+CVSSScoreSets          : {@{ProductId=12270; Product=Azure DevOps Server 2022.1; BaseScore=6,5; TemporalScore=5,7; Vector=CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N/E:U/RL:O/RC:C},
+                         @{ProductId=12143; Product=Azure DevOps Server 2020.1.2; BaseScore=6,5; TemporalScore=5,7; Vector=CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N/E:U/RL:O/RC:C}}
+Remediations           : {@{ProductId=12270; Product=Azure DevOps Server 2022.1; Description=Release Notes; Type=2; Url=; DateSpecified=False; RestartRequired=Maybe; SubType=Security Update;
+                         FixedBuild=20231128.1}, @{ProductId=12143; Product=Azure DevOps Server 2020.1.2; Description=Release Notes; Type=2; Url=; DateSpecified=False; RestartRequired=Maybe;
+                         SubType=Security Update; FixedBuild=20231127.4}}
+Acknowledgments        : @{Name=<a href="https://twitter.com/agdosil">Anton Garcia Dosil</a>; Url=System.Object[]}
 DiscoveryDateSpecified : False
 ReleaseDateSpecified   : False
-Ordinal                : 39
-ProductStatuses        : @{ProductId=; Product=; Type=3}
-RevisionHistory        : @{Number=1.0; Date=07.12.2023 18:58:56; Description=<p>Information published.</p>
+Ordinal                : 2
+ProductStatuses        : @{ProductId=System.Object[]; Product=System.Object[]; Type=3}
+RevisionHistory        : @{Number=1.0; Date=13.12.2023 08:00:00; Description=<p>Information published. This CVE was addressed by updates that were released in December 2023, but the CVE was
+                         inadvertently omitted from the December 2023 Security Updates. Microsoft strongly recommends that customers running affected versions of Azure DevOps Server install
+                         the December 2023 updates to be protected from this vulnerability.</p>
                          }
-Threats                : {@{ProductId=11655; Product=Microsoft Edge (Chromium-based); Type=0; DateSpecified=False; Description=}, @{ProductId=11655; Product=Microsoft Edge (Chromium-based);
-                         Type=3; DateSpecified=False; Description=}, @{ProductId=; Product=; Type=1; DateSpecified=False; Description=DOS:N/A}}
+Threats                : {@{ProductId=12270; Product=Azure DevOps Server 2022.1; Type=0; DateSpecified=False; Description=Spoofing}, @{ProductId=12143; Product=Azure DevOps Server 2020.1.2;
+                         Type=0; DateSpecified=False; Description=Spoofing}, @{ProductId=12270; Product=Azure DevOps Server 2022.1; Type=3; DateSpecified=False; Description=Important},
+                         @{ProductId=12143; Product=Azure DevOps Server 2020.1.2; Type=3; DateSpecified=False; Description=Important}…}
 ```
 
 ### only return Product Tree
