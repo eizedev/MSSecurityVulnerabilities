@@ -12,6 +12,7 @@ A PowerShell module for retrieving information regarding Microsoft security vuln
 >
 > A comparable command that outputs the raw information with the official module would be `$cvrfDoc = Get-MsrcCvrfDocument -ID 2023-Dec -Verbose`.  
 > For this you will need to install the official module first (not needed here for the `Find-MSSecurityVulnerabilities` function).
+> Also check the microsoft blog post: https://msrc.microsoft.com/blog/2021/02/continuing-to-listen-good-news-about-the-security-update-guide-api/
 
 ## Examples
 
