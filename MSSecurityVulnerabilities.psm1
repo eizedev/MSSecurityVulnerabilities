@@ -12,9 +12,6 @@ function Find-MSSecurityVulnerabilities {
         [string]
         $Year,
 
-        [string]
-        $ApiKey,
-
         [switch]
         $ReturnProductTree
     )
@@ -23,7 +20,6 @@ function Find-MSSecurityVulnerabilities {
     $BaseUrl = 'https://api.msrc.microsoft.com'
     $Splat = @{
         Uri         = "$BaseUrl/cvrf/$Year-$Month`?api-Version=2016"
-        Headers     = @{'Api-Key' = $ApiKey }
         ContentType = 'application/json'
     }
 
