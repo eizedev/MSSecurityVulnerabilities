@@ -6,7 +6,7 @@ A PowerShell module for retrieving information regarding Microsoft security vuln
 >
 > If you want to test the `2.0` REST API, please take a look at https://api.msrc.microsoft.com/cvrf/v2.0/swagger/index
 >
-> There is also a official powershell module for the `2.0` REST API with other/additional functionallity available: https://github.com/microsoft/MSRC-Microsoft-Security-Updates-API
+> There is also an official powershell module for the `2.0` REST API with other/additional functionallity available: https://github.com/microsoft/MSRC-Microsoft-Security-Updates-API
 
 ## Examples
 
