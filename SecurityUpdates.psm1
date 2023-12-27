@@ -1,4 +1,4 @@
-function Find-MSSecurityUpdate {
+function Find-MSSecurityVulnerabilities {
     [CmdletBinding()]
     param
     (
