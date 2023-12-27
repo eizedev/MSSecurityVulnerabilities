@@ -37,7 +37,6 @@ function Find-MSSecurityVulnerabilities {
         $Result.Vulnerability | ForEach-Object {
             [PSCustomObject]@{
                 Title                  = $_.title.Value
-                NotesValue             = $_.Notes.Value
                 Notes                  = $_.Notes | ForEach-Object {
                     [PSCustomObject]@{
                         Title   = $_.Title
