@@ -10,7 +10,8 @@ A PowerShell module for retrieving information regarding Microsoft security vuln
 >
 > This powershell module/code here in this repository only parses the resultend `vulnerabilities` from the api and output it in a specific way
 >
-> A comparable command that outputs the raw information with the official module would be `$cvrfDoc = Get-MsrcCvrfDocument -ID 2023-Dec -Verbose`.
+> A comparable command that outputs the raw information with the official module would be `$cvrfDoc = Get-MsrcCvrfDocument -ID 2023-Dec -Verbose`.  
+> For this you will need to install the official module first (not needed here for the `Find-MSSecurityVulnerabilities` function).
 
 ## Examples
 
@@ -23,6 +24,83 @@ Find-MSSecurityVulnerabilities -Month Dec -Year 2023
 ```
 
 Add `-Verbose` to get verbose output (f.e. url)
+
+Example result:
+
+```powershell
+Title                  : Chromium: CVE-2023-6508 Use after free in Media Stream
+NotesValue             : {<p>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see <a
+                         href="https://chromereleases.googleblog.com/2023">Google Chrome Releases</a> for more information.</p>
+                         , <p><strong>Why is this Chrome CVE included in the Security Update Guide?</strong></p>
+                         <p>The vulnerability assigned to this CVE is in Chromium Open Source Software (OSS) which is consumed by Microsoft Edge (Chromium-based). It is being documented in
+                         the Security Update Guide to announce that the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable.</p>
+                         <p><strong>How can I see the version of the browser?</strong></p>
+                         <ol>
+                         <li>In your Microsoft Edge browser, click on the 3 dots (...) on the very right-hand side of the window</li>
+                         <li>Click on <strong>Help and Feedback</strong></li>
+                         <li>Click on <strong>About Microsoft Edge</strong></li>
+                         </ol>
+                         , <p><strong>What is the version information for this release?</strong></p>
+                         <table>
+                         <thead>
+                         <tr>
+                         <th>Microsoft Edge Version</th>
+                         <th>Date Released</th>
+                         <th>Based on Chromium Version</th>
+                         </tr>
+                         </thead>
+                         <tbody>
+                         <tr>
+                         <td>120.0.2210.61</td>
+                         <td>12/7/2023</td>
+                         <td>120.0.6099.62/.63</td>
+                         </tr>
+                         </tbody>
+                         </table>
+                         , Microsoft Edge (Chromium-based)…}
+Notes                  : {@{Title=Description; Type=2; Ordinal=0; Value=<p>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this
+                         vulnerability. Please see <a href="https://chromereleases.googleblog.com/2023">Google Chrome Releases</a> for more information.</p>
+                         }, @{Title=FAQ; Type=4; Ordinal=10; Value=<p><strong>Why is this Chrome CVE included in the Security Update Guide?</strong></p>
+                         <p>The vulnerability assigned to this CVE is in Chromium Open Source Software (OSS) which is consumed by Microsoft Edge (Chromium-based). It is being documented in
+                         the Security Update Guide to announce that the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable.</p>
+                         <p><strong>How can I see the version of the browser?</strong></p>
+                         <ol>
+                         <li>In your Microsoft Edge browser, click on the 3 dots (...) on the very right-hand side of the window</li>
+                         <li>Click on <strong>Help and Feedback</strong></li>
+                         <li>Click on <strong>About Microsoft Edge</strong></li>
+                         </ol>
+                         }, @{Title=FAQ; Type=4; Ordinal=10; Value=<p><strong>What is the version information for this release?</strong></p>
+                         <table>
+                         <thead>
+                         <tr>
+                         <th>Microsoft Edge Version</th>
+                         <th>Date Released</th>
+                         <th>Based on Chromium Version</th>
+                         </tr>
+                         </thead>
+                         <tbody>
+                         <tr>
+                         <td>120.0.2210.61</td>
+                         <td>12/7/2023</td>
+                         <td>120.0.6099.62/.63</td>
+                         </tr>
+                         </tbody>
+                         </table>
+                         }, @{Title=Microsoft Edge (Chromium-based); Type=7; Ordinal=20; Value=Microsoft Edge (Chromium-based)}…}
+CVE                    : CVE-2023-6508
+CVSSScoreSets          :
+Remediations           : @{ProductId=11655; Product=Microsoft Edge (Chromium-based); Description=Release Notes; Type=2; Url=; DateSpecified=False; RestartRequired=No; SubType=Security
+                         Update; FixedBuild=120.0.2210.61}
+Acknowledgments        :
+DiscoveryDateSpecified : False
+ReleaseDateSpecified   : False
+Ordinal                : 39
+ProductStatuses        : @{ProductId=; Product=; Type=3}
+RevisionHistory        : @{Number=1.0; Date=07.12.2023 18:58:56; Description=<p>Information published.</p>
+                         }
+Threats                : {@{ProductId=11655; Product=Microsoft Edge (Chromium-based); Type=0; DateSpecified=False; Description=}, @{ProductId=11655; Product=Microsoft Edge (Chromium-based);
+                         Type=3; DateSpecified=False; Description=}, @{ProductId=; Product=; Type=1; DateSpecified=False; Description=DOS:N/A}}
+```
 
 ### only return Product Tree
 
