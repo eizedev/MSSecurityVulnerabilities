@@ -1,12 +1,14 @@
 # MSSecurityVulnerabilities
 
-A PowerShell module for retrieving information regarding Microsoft security vulnerabilities using the Security Updates API (version 1) from https://portal.msrc.microsoft.com/en-us/developer
+A PowerShell module for retrieving information regarding Microsoft security vulnerabilities using the Security Updates API from https://portal.msrc.microsoft.com/en-us/developer
 
-> As of `2021-02` the API Key is not needed anymore for the MSRC CVRF API
+> As of `2021-02` the API Key is not needed anymore for the MSRC CVRF API, so it was removed from the code
 >
-> If you want to test the `2.0` REST API, please take a look at https://api.msrc.microsoft.com/cvrf/v2.0/swagger/index
+> You will find the API documentation at https://api.msrc.microsoft.com/cvrf/v2.0/swagger/index
 >
-> There is also an official powershell module for the `2.0` REST API with other/additional functionallity available: https://github.com/microsoft/MSRC-Microsoft-Security-Updates-API
+> There is also an official powershell module for the `2.0` REST API with additional functionallity available: https://github.com/microsoft/MSRC-Microsoft-Security-Updates-API
+>
+> This powershell module/code here in this repsitory only parses the resultend `vulnerabilities` from the api and output it in a specific way
 
 ## Examples
 
@@ -91,4 +93,7 @@ ProductID Value
 9344      Windows Server 2008 for x64-based Systems Service Pack 2 (Server Core installation)
 ```
 
+## Contribution
+
+Thanks [@opexxx](https://github.com/opexxx) for the initial version and idea
 
