@@ -19,7 +19,8 @@ function Find-MSSecurityVulnerabilities {
     $Month = (Get-Culture).TextInfo.ToTitleCase($Month)
     $BaseUrl = 'https://api.msrc.microsoft.com'
     $Splat = @{
-        Uri         = "$BaseUrl/cvrf/$Year-$Month`?api-Version=2016"
+        # https://api.msrc.microsoft.com/cvrf/v2.0/cvrf/2023-Dec?api-version=2016-08-01
+        Uri         = "$BaseUrl/cvrf/v2.0/cvrf/$Year-$Month`?api-version=2016-08-01"
         ContentType = 'application/json'
     }
 
